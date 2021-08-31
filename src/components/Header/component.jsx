@@ -25,7 +25,7 @@ const Header = ({ props }) => {
           noWrap
           className={classes.toolbarTitle}
         >
-          Streamcast
+          Boilerplate
         </Typography>
         <nav>
           {menu.map((m, i) => (
