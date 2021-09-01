@@ -15,11 +15,11 @@ const headerStyles = makeStyles((theme) => ({
   },
   link: {
     margin: theme.spacing(1, 1.5),
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.dark,
   },
   activelink: {
     margin: theme.spacing(1, 1.5),
-    color: theme.palette.primary.light,
+    color: theme.palette.grey[900],
   },
   icon: {
     paddingRight: '5px',

@@ -21,12 +21,8 @@ const Main = () => {
         <Header />
         <Container className={classes.main} maxWidth="sm">
           <div>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/player">
-              <Player />
-            </Route>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/player" component={Player} />
           </div>
         </Container>
       </Router>

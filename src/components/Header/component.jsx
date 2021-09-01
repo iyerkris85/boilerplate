@@ -8,13 +8,17 @@ import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from '@material-ui/core/Link';
 import { withRouter } from 'react-router';
+import PropTypes from 'prop-types';
 import headerStyles from './styles';
 import menu from './menu';
 
-const Header = () => {
+const Header = (props) => {
   const [classes] = useState(headerStyles());
 
-  function isActive() {
+  function isActive(path) {
+    if (props.location.pathname === path) {
+      return true;
+    }
     return false;
   }
 
@@ -40,6 +44,10 @@ const Header = () => {
       </Toolbar>
     </AppBar>
   );
+};
+
+Header.propTypes = {
+  location: PropTypes.string.isRequired,
 };
 
 export default withRouter(Header);
