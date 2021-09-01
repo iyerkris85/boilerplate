@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from "@material-ui/core/Link";
 import headerStyles from "./styles";
 import menu from "./menu";
@@ -29,15 +30,18 @@ const Header = ({ props }) => {
         </Typography>
         <nav>
           {menu.map((m, i) => (
-            <Link
-              variant="button"
-              key={i}
-              color="textPrimary"
-              className={classes.link}
-              href={m.path}
-            >
-              {m.label}
-            </Link>
+            <React.Fragment>
+              <FontAwesomeIcon icon={m.icon} />
+              <Link
+                variant="button"
+                key={i}
+                color="textPrimary"
+                className={classes.link}
+                href={m.path}
+              >
+                {m.label}
+              </Link>
+            </React.Fragment>
           ))}
         </nav>
       </Toolbar>
