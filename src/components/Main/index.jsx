@@ -1,7 +1,5 @@
-import React from "react";
-import Main from "./component";
+import React from 'react';
+import Main from './component';
 
-const AppMain = () => {
-  return <Main />;
-};
+const AppMain = () => <Main />;
 export default AppMain;

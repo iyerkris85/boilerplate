@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
+import { withRouter } from 'react-router';
 
-const Player = (props) => {
-  return <div>Player</div>;
-};
-
-export default Player;
+const Player = () => <div>Player</div>;
+export default withRouter(Player);

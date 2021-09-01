@@ -2,11 +2,11 @@
  * Sticky Footer component
  */
 
-import React, { useState } from "react";
-import footerStyles from "./styles";
-import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import React, { useState } from 'react';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
+import footerStyles from './styles';
 
 const Footer = () => {
   const [classes] = useState(footerStyles());
@@ -15,12 +15,11 @@ const Footer = () => {
       <Container maxWidth="sm">
         <Typography variant="body1">All rights reserved.</Typography>
         <Typography variant="body2" color="textSecondary">
-          {"Copyright © "}
+          {'Copyright © '}
           <Link color="inherit" href="https://material-ui.com/">
             Your website name
-          </Link>{" "}
-          {new Date().getFullYear()}
-          {"."}
+          </Link>{' '}
+          {new Date().getFullYear()}.
         </Typography>
       </Container>
     </footer>

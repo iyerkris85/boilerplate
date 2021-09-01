@@ -13,6 +13,8 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-error-boundary": "^3.1.3",
+    "react-router": "^5.2.1",
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
@@ -22,7 +24,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"{,!(node_modules)/**/}*.jsx\""
+    "format": "prettier --write \"{,!(node_modules)/**/}*.jsx\"",
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -43,8 +47,14 @@
     ]
   },
   "devDependencies": {
-    "prettier": "^2.3.2",
-    "video.js": "^7.15.4",
-    "videojs-google-chromecast": "^0.1.8"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.3.2"
   }
 }

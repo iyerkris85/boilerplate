@@ -1,7 +1,6 @@
-import React from "react";
-import Header from "./component";
+import React from 'react';
+import Header from './component';
 
-const AppHeader = () => {
-  return <Header />;
-};
+const AppHeader = () => <Header />;
+
 export default AppHeader;

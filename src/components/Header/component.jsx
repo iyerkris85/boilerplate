@@ -1,47 +1,40 @@
 /**
  * Header panel
  */
-import React, { useState } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
+import React, { useState } from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Link from "@material-ui/core/Link";
-import headerStyles from "./styles";
-import menu from "./menu";
+import Link from '@material-ui/core/Link';
+import { withRouter } from 'react-router';
+import headerStyles from './styles';
+import menu from './menu';
 
-const Header = ({ props }) => {
+const Header = () => {
   const [classes] = useState(headerStyles());
+
+  function isActive() {
+    return false;
+  }
+
   return (
-    <AppBar
-      position="static"
-      color="default"
-      elevation={0}
-      className={classes.appBar}
-    >
+    <AppBar position="static" color="default" elevation={0} className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
-        <Typography
-          variant="h6"
-          color="inherit"
-          noWrap
-          className={classes.toolbarTitle}
-        >
+        <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
           Boilerplate
         </Typography>
         <nav>
-          {menu.map((m, i) => (
-            <React.Fragment>
-              <FontAwesomeIcon icon={m.icon} />
-              <Link
-                variant="button"
-                key={i}
-                color="textPrimary"
-                className={classes.link}
-                href={m.path}
-              >
-                {m.label}
-              </Link>
-            </React.Fragment>
+          {menu.map((m) => (
+            <Link
+              key={m.label}
+              className={isActive(m.path) ? classes.activelink : classes.link}
+              href={m.path}
+              underline="none"
+            >
+              <FontAwesomeIcon icon={m.icon} className={classes.icon} />
+              {m.label}
+            </Link>
           ))}
         </nav>
       </Toolbar>
@@ -49,4 +42,4 @@ const Header = ({ props }) => {
   );
 };
 
-export default Header;
+export default withRouter(Header);

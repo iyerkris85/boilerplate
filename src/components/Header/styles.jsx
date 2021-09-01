@@ -1,20 +1,28 @@
 /**
  * Styles for Header
  */
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 
 const headerStyles = makeStyles((theme) => ({
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
   toolbar: {
-    flexWrap: "wrap",
+    flexWrap: 'wrap',
   },
   toolbarTitle: {
     flexGrow: 1,
   },
   link: {
     margin: theme.spacing(1, 1.5),
+    color: theme.palette.primary.main,
+  },
+  activelink: {
+    margin: theme.spacing(1, 1.5),
+    color: theme.palette.primary.light,
+  },
+  icon: {
+    paddingRight: '5px',
   },
 }));
 

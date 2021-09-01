@@ -1,8 +1,6 @@
-import React from "react";
-import Home from "./component";
+import React from 'react';
+import Home from './component';
 
-const AppHome = () => {
-  return <Home />;
-};
+const AppHome = () => <Home />;
 
 export default AppHome;

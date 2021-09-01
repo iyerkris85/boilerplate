@@ -1,8 +1,6 @@
-import React from "react";
-import Player from "./component";
+import React from 'react';
+import Player from './component';
 
-const AppPlayer = () => {
-  return <Player />;
-};
+const AppPlayer = () => <Player />;
 
 export default AppPlayer;

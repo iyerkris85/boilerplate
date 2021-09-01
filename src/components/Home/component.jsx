@@ -1,7 +1,5 @@
-import React from "react";
+import React from 'react';
+import { withRouter } from 'react-router';
 
-const Home = () => {
-  return <div>Hello World!!</div>;
-};
-
-export default Home;
+const Home = () => <div>Hello World!!</div>;
+export default withRouter(Home);
