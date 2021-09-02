@@ -47,7 +47,7 @@ const Header = (props) => {
 };
 
 Header.propTypes = {
-  location: PropTypes.string.isRequired,
+  location: PropTypes.shape().isRequired,
 };
 
 export default withRouter(Header);
